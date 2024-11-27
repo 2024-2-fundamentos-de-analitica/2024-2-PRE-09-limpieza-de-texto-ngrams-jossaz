@@ -35,7 +35,7 @@ def create_key(df, n):
     #
     # - Convierta el texto a una lista de n-gramas
     df["key"] = df["key"].map(
-        lambda x: [x[t : t + n ] for t in range(len(x))],
+        lambda x: [x[t : t + n - 1 ] for t in range(len(x))],
     )
     #
     # - Ordene la lista de n-gramas y remueve duplicados
